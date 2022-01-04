@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🤗🤗🤗🤗 Validando estilo del commit...'
+npx --no-install commitlint --edit "$1" || (
+    echo "🙈 Tu commit no cumple las reglas definidas en <<conventional commits>> 🙈
+    pd: Dale un ojo a este comando: 'npm run commit' 👌🏽";
+    false;
+)

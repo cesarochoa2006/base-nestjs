@@ -1,0 +1,16 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🤗🤗🤗🤗 Validando estilo del código (sonar)...'
+npm run lint || (
+echo "Tu código no es tan limpio como debería y no pasa el filtro, 
+    por favor revisalo y prueba nuevamente 🙈
+    pd: Dale un ojo a este comando: 'npm run lint' 👌🏽";
+    false;
+)
+echo '🤗🤗🤗🤗 Ejecutando pruebas unitarias y validando cobertura...'
+npm run test:cov || (
+echo "Las pruebas unitarias fallaron o no cumplen con la cobertura 🙈 
+    false;
+)
+echo 'Voy a realizar el commit ahora 🤠'

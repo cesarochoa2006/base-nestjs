@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🤗🤗🤗🤗 Versionando automáticamente antes de publicar en git...'
+npm run release
+echo 'Voy a publicar al repositorio ahora 🤠'
