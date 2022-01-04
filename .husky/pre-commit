@@ -10,7 +10,7 @@ echo "Tu código no es tan limpio como debería y no pasa el filtro,
 )
 echo '🤗🤗🤗🤗 Ejecutando pruebas unitarias y validando cobertura...'
 npm run test:cov || (
-echo "Las pruebas unitarias fallaron o no cumplen con la cobertura 🙈 
+echo "Las pruebas unitarias fallaron o no cumplen con la cobertura 🙈" 
     false;
 )
 echo 'Voy a realizar el commit ahora 🤠'
